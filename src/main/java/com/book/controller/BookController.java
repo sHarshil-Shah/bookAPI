@@ -12,8 +12,9 @@ import org.springframework.web.bind.annotation.*;
 import com.book.model.Book;
 import com.book.repository.BookRepository;
 
-@CrossOrigin(origins = "http://localhost:8080")
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
+@RequestMapping("/api")
 public class BookController {
 
 	@Autowired
