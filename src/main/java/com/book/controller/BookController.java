@@ -37,7 +37,7 @@ public class BookController {
 		}
 	}
 
-	@RequestMapping(value = "/search/{term}", method = RequestMethod.GET)
+	@RequestMapping(value = "/search/{title}", method = RequestMethod.GET)
 	public ResponseEntity<List<Book>> getByTitleContaining(@PathVariable String term) {
 		List<Book> Books = new ArrayList<Book>();
 		bookRepository.findByTitleContaining(term).forEach(Books::add);
